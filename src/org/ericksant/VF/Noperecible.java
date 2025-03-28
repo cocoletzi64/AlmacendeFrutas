@@ -5,9 +5,13 @@ public class Noperecible extends Producto{
     private int contenido;
     private int calorias;
     //constructor
-    public Noperecible(String nombre, double precio) {
+
+    public Noperecible(String nombre, double precio, int contenido, int calorias) {
         super(nombre, precio);
+        this.contenido = contenido;
+        this.calorias = calorias;
     }
+
     //getter and setter
 
     public int getContenido() {
@@ -24,5 +28,12 @@ public class Noperecible extends Producto{
 
     public void setCalorias(int calorias) {
         this.calorias = calorias;
+    }
+    //metodos
+    @Override
+    public String toString() {
+        return super.toString()+
+                "contenido = " + contenido +"\n"+
+                "calorias = " + calorias +"\n";
     }
 }

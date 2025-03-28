@@ -2,12 +2,16 @@ package org.ericksant.VF;
 
 public class Fruta extends Producto{
     private double peso;
-    private int color;
+    private String color;
 
     //constructor
-    public Fruta(String nombre, double precio) {
+
+    public Fruta(String nombre, double precio, double peso, String color) {
         super(nombre, precio);
+        this.peso = peso;
+        this.color = color;
     }
+
     //getter and setter
 
     public double getPeso() {
@@ -18,11 +22,19 @@ public class Fruta extends Producto{
         this.peso = peso;
     }
 
-    public int getColor() {
+    public String  getColor() {
         return color;
     }
 
-    public void setColor(int color) {
+    public void setColor(String color) {
         this.color = color;
+    }
+    //metodos
+
+    @Override
+    public String toString() {
+        return super.toString()+
+                "peso = " + peso +"\n"+
+                "color = " + color+"\n";
     }
 }

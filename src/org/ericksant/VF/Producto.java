@@ -4,6 +4,7 @@ public class Producto {
     private String nombre;
     private double precio;
 
+
     //constructor
 
     public Producto(String nombre, double precio) {
@@ -26,5 +27,16 @@ public class Producto {
 
     public void setPrecio(double precio) {
         this.precio = precio;
+    }
+
+
+    //metodos
+
+
+    @Override
+    public String toString() {
+        return
+                "nombre = " + nombre +"\n"+
+                "precio = " + precio+"\n" ;
     }
 }
